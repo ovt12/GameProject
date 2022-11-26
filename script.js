@@ -30,21 +30,21 @@ const startGame = () => {
 
 // WHEN TARGET IS CLICKED IT TAKES THE VALUE FROM THE EVENT IN THIS CASE THE ID'S
 boxClicked = (event) => {
-  const id = event.target.id;
-
   if (currentPLayer == playerX) {
     event.target.innertext = currentPLayer;
-    cells.innertext = currentPLayer
   }
-
   if (currentPLayer == playerX) {
     currentPLayer = playerO;
   } else {
     currentPLayer = playerX;
   }
 
-  console.log(currentPLayer);
-  console.log(id);
+  return (event.target.innerHTML = currentPLayer);
 };
 
+console.log(currentPLayer);
+console.log(cells);
+
 startGame();
+
+winningMessage.innerHTML = "hello";
