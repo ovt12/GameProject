@@ -4,11 +4,12 @@ const board = document.querySelectorAll(".board");
 const restartButton = document.querySelector(".restartButton");
 const winningMessage = document.querySelector(".winningMessage");
 const endGameMessages = document.querySelector(".endGameMessages");
+const heading = document.querySelector("h1")
 
 const playerX = "x";
 const playerO = "o";
 
-let currentPLayer = playerX;
+let currentPlayer = playerX;
 
 const winningCombination = [
   [0, 1, 2],
@@ -29,22 +30,42 @@ const startGame = () => {
 };
 
 // WHEN TARGET IS CLICKED IT TAKES THE VALUE FROM THE EVENT IN THIS CASE THE ID'S
-boxClicked = (event) => {
-  if (currentPLayer == playerX) {
-    event.target.innertext = currentPLayer;
-  }
-  if (currentPLayer == playerX) {
-    currentPLayer = playerO;
-  } else {
-    currentPLayer = playerX;
-  }
 
-  return (event.target.innerHTML = currentPLayer);
+
+boxClicked = (event) => {
+  if (currentPlayer == playerX) {
+    console.log(currentPlayer)
+    event.target.innertext = currentPlayer;
+    console.log(currentPlayer)
+  }
+  if (currentPlayer == playerO) {
+    console.log(currentPlayer)
+    currentPlayer = playerX;
+    console.log(currentPlayer)
+  } else {
+    console.log(currentPlayer)
+    currentPlayer = playerO;
+    console.log(currentPlayer)
+  }
+  console.log(currentPlayer)
+  event.target.innerHTML = currentPlayer;
 };
 
-console.log(currentPLayer);
-console.log(cells);
+
+const playerHasWon = () => {
+
+}
+
+
+const restart = () => {
+    cells.forEach(cell => {
+        cell.innerHTML = ""
+    })
+    heading.innerHTML = "Tic Tac Toe"
+    currentPlayer = playerX;
+} 
+restartButton.addEventListener("click", restart)
+
 
 startGame();
 
-winningMessage.innerHTML = "hello";
