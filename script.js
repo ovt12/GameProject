@@ -4,12 +4,12 @@ const board = document.querySelectorAll(".board");
 const restartButton = document.querySelector(".restartButton");
 const winningMessage = document.querySelector(".winningMessage");
 const endGameMessages = document.querySelector(".endGameMessages");
-const heading = document.querySelector("h1")
+const heading = document.querySelector("h1");
 
 const playerX = "x";
 const playerO = "o";
 
-let winnerArray = []
+let winnerArray = [];
 
 let currentPlayer = playerX;
 
@@ -36,7 +36,7 @@ const startGame = () => {
 boxClicked = (event) => {
   if (currentPlayer == playerX) {
     event.target.innertext = currentPlayer;
-    winnerArray.push(event.target.id)
+    winnerArray.push(event.target.id);
   }
 
   if (currentPlayer == playerO) {
@@ -44,35 +44,32 @@ boxClicked = (event) => {
   } else {
     currentPlayer = playerO;
   }
-    event.target.innerHTML = currentPlayer;
+  event.target.innerHTML = currentPlayer;
 
-    playerHasWon()
-    
-    
+  playerHasWon();
 };
 
+// FUNCTION TO CHECK IF PLAYER HAS ONE
+
 const playerHasWon = () => {
-        if (winnerArray == winningCombination[0]) {
-            alert("winner")
-        }
-        else {
-            console.log(winnerArray)
-            console.log(winningCombination[0])
-        }
-    }
+  if (String(winnerArray) == winningCombination[0]) {
+    alert("winner");
+  } else {
+    console.log(winnerArray);
+    console.log(winningCombination[0]);
+  }
+};
 
-console.log(winningCombination[0])
+console.log(winningCombination[0]);
 
-
+// FUNCTION TO RESTART THE GAME
 const restart = () => {
-    cells.forEach(cell => {
-        cell.innerHTML = ""
-    })
-    heading.innerHTML = "Tic Tac Toe"
-    currentPlayer = playerO;
-} 
-restartButton.addEventListener("click", restart)
-
+  cells.forEach((cell) => {
+    cell.innerHTML = "";
+  });
+  heading.innerHTML = "Tic Tac Toe";
+  currentPlayer = playerO;
+};
+restartButton.addEventListener("click", restart);
 
 startGame();
-
