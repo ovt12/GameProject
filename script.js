@@ -9,6 +9,8 @@ const heading = document.querySelector("h1")
 const playerX = "x";
 const playerO = "o";
 
+const winnerArray = []
+
 let currentPlayer = playerX;
 
 const winningCombination = [
@@ -31,28 +33,23 @@ const startGame = () => {
 
 // WHEN TARGET IS CLICKED IT TAKES THE VALUE FROM THE EVENT IN THIS CASE THE ID'S
 
-
 boxClicked = (event) => {
   if (currentPlayer == playerX) {
-    console.log(currentPlayer)
     event.target.innertext = currentPlayer;
-    console.log(currentPlayer)
+    winnerArray.push(event.target.id)
+    console.log(winnerArray)
   }
   if (currentPlayer == playerO) {
-    console.log(currentPlayer)
     currentPlayer = playerX;
-    console.log(currentPlayer)
   } else {
-    console.log(currentPlayer)
+    
     currentPlayer = playerO;
-    console.log(currentPlayer)
   }
-  console.log(currentPlayer)
-  event.target.innerHTML = currentPlayer;
+    event.target.innerHTML = currentPlayer;
 };
 
-
 const playerHasWon = () => {
+
 
 }
 
@@ -62,7 +59,7 @@ const restart = () => {
         cell.innerHTML = ""
     })
     heading.innerHTML = "Tic Tac Toe"
-    currentPlayer = playerX;
+    currentPlayer = playerO;
 } 
 restartButton.addEventListener("click", restart)
 
