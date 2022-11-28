@@ -54,87 +54,89 @@ const winningCycle = () => {
 
 
 
+// const winningCycle = () => {
 
-    // if(cells[0].textContent === "o" &&
-    //     cells[1].textContent === "o" &&
-    //     cells[2].textContent === "o"
-    //     ) { alert("Win")}
-        // else if (
-        //   cells[3].textContent === "o" &&
-        //   cells[4].textContent === "o" &&
-        //   cells[5].textContent === "o"
-        // ) { alert("Win")}
-        //  else if (
-        //   cells[6].textContent === "o" &&
-        //   cells[7].textContent === "o" &&
-        //   cells[8].textContent === "o"
-        // ) { alert("Win")}
-        // else if (
-        //     cells[0].textContent === "o" &&
-        //     cells[3].textContent === "o" &&
-        //     cells[6].textContent === "o"
-        //   ) { alert("Win")}
-        // else if (
-        //     cells[1].textContent === "o" &&
-        //     cells[4].textContent === "o" &&
-        //     cells[7].textContent === "o"
-        //   ) { alert("Win")}
-        // else if (
-        //     cells[2].textContent === "o" &&
-        //     cells[5].textContent === "o" &&
-        //     cells[8].textContent === "o"
-        //   ) { alert("Win")}
-        // else if (
-        //     cells[0].textContent === "o" &&
-        //     cells[4].textContent === "o" &&
-        //     cells[8].textContent === "o"
-        //   ) { alert("Win")}
-        // else if (
-        //     cells[2].textContent === "o" &&
-        //     cells[4].textContent === "o" &&
-        //     cells[6].textContent === "o"
-        //   ) { alert("Win")}
+//     if(cells[0].textContent === "o" &&
+//         cells[1].textContent === "o" &&
+//         cells[2].textContent === "o"
+//         ) { alert("Win")}
+//         else if (
+//           cells[3].textContent === "o" &&
+//           cells[4].textContent === "o" &&
+//           cells[5].textContent === "o"
+//         ) { alert("Win")}
+//          else if (
+//           cells[6].textContent === "o" &&
+//           cells[7].textContent === "o" &&
+//           cells[8].textContent === "o"
+//         ) { alert("Win")}
+//         else if (
+//             cells[0].textContent === "o" &&
+//             cells[3].textContent === "o" &&
+//             cells[6].textContent === "o"
+//           ) { alert("Win")}
+//         else if (
+//             cells[1].textContent === "o" &&
+//             cells[4].textContent === "o" &&
+//             cells[7].textContent === "o"
+//           ) { alert("Win")}
+//         else if (
+//             cells[2].textContent === "o" &&
+//             cells[5].textContent === "o" &&
+//             cells[8].textContent === "o"
+//           ) { alert("Win")}
+//         else if (
+//             cells[0].textContent === "o" &&
+//             cells[4].textContent === "o" &&
+//             cells[8].textContent === "o"
+//           ) { alert("Win")}
+//         else if (
+//             cells[2].textContent === "o" &&
+//             cells[4].textContent === "o" &&
+//             cells[6].textContent === "o"
+//           ) { alert("Win")}
         
 
-        // if(cells[0].textContent === "x" &&
-        //   cells[1].textContent === "x" &&
-        //   cells[2].textContent === "x"
-        //   ) { alert("Win")}
-        //   else if (
-        //     cells[3].textContent === "x" &&
-        //     cells[4].textContent === "x" &&
-        //     cells[5].textContent === "x"
-        //   ) { alert("Win")}
-        //    else if (
-        //     cells[6].textContent === "x" &&
-        //     cells[7].textContent === "x" &&
-        //     cells[8].textContent === "x"
-        //   ) { alert("Win")}
-        //   else if (
-        //       cells[0].textContent === "x" &&
-        //       cells[3].textContent === "x" &&
-        //       cells[6].textContent === "x"
-        //     ) { alert("Win")}
-        //   else if (
-        //       cells[1].textContent === "x" &&
-        //       cells[4].textContent === "x" &&
-        //       cells[7].textContent === "x"
-        //     ) { alert("Win")}
-        //   else if (
-        //       cells[2].textContent === "x" &&
-        //       cells[5].textContent === "x" &&
-        //       cells[8].textContent === "x"
-        //     ) { alert("Win")}
-        //   else if (
-        //       cells[0].textContent === "x" &&
-        //       cells[4].textContent === "x" &&
-        //       cells[8].textContent === "x"
-        //     ) { alert("Win")}
-        //   else if (
-        //       cells[2].textContent === "x" &&
-        //       cells[4].textContent === "x" &&
-        //       cells[6].textContent === "x"
-        //     ) { alert("Win")}
+//         if(cells[0].textContent === "x" &&
+//           cells[1].textContent === "x" &&
+//           cells[2].textContent === "x"
+//           ) { alert("Win")}
+//           else if (
+//             cells[3].textContent === "x" &&
+//             cells[4].textContent === "x" &&
+//             cells[5].textContent === "x"
+//           ) { alert("Win")}
+//            else if (
+//             cells[6].textContent === "x" &&
+//             cells[7].textContent === "x" &&
+//             cells[8].textContent === "x"
+//           ) { alert("Win")}
+//           else if (
+//               cells[0].textContent === "x" &&
+//               cells[3].textContent === "x" &&
+//               cells[6].textContent === "x"
+//             ) { alert("Win")}
+//           else if (
+//               cells[1].textContent === "x" &&
+//               cells[4].textContent === "x" &&
+//               cells[7].textContent === "x"
+//             ) { alert("Win")}
+//           else if (
+//               cells[2].textContent === "x" &&
+//               cells[5].textContent === "x" &&
+//               cells[8].textContent === "x"
+//             ) { alert("Win")}
+//           else if (
+//               cells[0].textContent === "x" &&
+//               cells[4].textContent === "x" &&
+//               cells[8].textContent === "x"
+//             ) { alert("Win")}
+//           else if (
+//               cells[2].textContent === "x" &&
+//               cells[4].textContent === "x" &&
+//               cells[6].textContent === "x"
+//             ) { alert("Win")}
+// }
       
       
 
