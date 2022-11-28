@@ -11,7 +11,7 @@ const playerO = "o";
 
 let winnerArray = [];
 
-let currentPlayer = playerX;
+let currentPlayer = "x";
 
 const winningCombination = [
   ["0", "1", "2"],
@@ -26,77 +26,117 @@ const winningCombination = [
 
 
 const winningCycle = () => {
-    if(cells[0].textContent === "o" &&
-        cells[1].textContent === "o" &&
-        cells[2].textContent === "o"
-        ) { alert("Win")}
-        else if (
-          cells[3].textContent === "o" &&
-          cells[4].textContent === "o" &&
-          cells[5].textContent === "o"
-        ) { alert("Win")}
-         else if (
-          cells[6].textContent === "o" &&
-          cells[7].textContent === "o" &&
-          cells[8].textContent === "o"
-        ) { alert("Win")}
-        else if (
-            cells[0].textContent === "o" &&
-            cells[3].textContent === "o" &&
-            cells[6].textContent === "o"
-          ) { alert("Win")}
-           else if (
-            cells[1].textContent === "o" &&
-            cells[4].textContent === "o" &&
-            cells[7].textContent === "o"
-          ) { alert("Win")}
-          else if (
-            cells[2].textContent === "o" &&
-            cells[5].textContent === "o" &&
-            cells[8].textContent === "o"
-          ) { alert("Win")}
-           else if (
-            cells[0].textContent === "o" &&
-            cells[4].textContent === "o" &&
-            cells[8].textContent === "o"
-          ) { alert("Win")}
-          else if (
-            cells[2].textContent === "o" &&
-            cells[4].textContent === "o" &&
-            cells[6].textContent === "o"
-          ) { alert("Win")}
+
+    if (cells[0].textContent === cells[1].textContent &&
+    cells[1].textContent === cells[2].textContent) { alert(`Player ${currentPlayer} wins!!`)}
+    
+    else if (cells[3].textContent === cells[4].textContent &&
+            cells[4].textContent === cells[5].textContent) { alert(`1 ${currentPlayer} wins!!`)}
+    
+    else if (cells[6].textContent === cells[7].textContent &&
+            cells[7].textContent === cells[8].textContent) { alert(`2${currentPlayer} wins!!`)}
+    
+    else if (cells[0].textContent === cells[3].textContent &&
+            cells[3].textContent === cells[6].textContent) { alert(`3${currentPlayer} wins!!`)}
+    
+    else if (cells[1].textContent === cells[4].textContent &&
+            cells[4].textContent === cells[7].textContent) { alert(`4${currentPlayer} wins!!`)}
+
+    else if (cells[2].textContent === cells[5].textContent &&
+            cells[5].textContent === cells[8].textContent) { alert(`5${currentPlayer} wins!!`)}
+        
+    else if (cells[0].textContent === cells[4].textContent &&
+            cells[4].textContent === cells[8].textContent) { alert(`6${currentPlayer} wins!!`)}
+        
+    else if (cells[2].textContent === cells[4].textContent &&
+            cells[4].textContent === cells[6].textContent) { alert(`7${currentPlayer} wins!!`)}
+}
+
+
+
+
+    // if(cells[0].textContent === "o" &&
+    //     cells[1].textContent === "o" &&
+    //     cells[2].textContent === "o"
+    //     ) { alert("Win")}
+        // else if (
+        //   cells[3].textContent === "o" &&
+        //   cells[4].textContent === "o" &&
+        //   cells[5].textContent === "o"
+        // ) { alert("Win")}
+        //  else if (
+        //   cells[6].textContent === "o" &&
+        //   cells[7].textContent === "o" &&
+        //   cells[8].textContent === "o"
+        // ) { alert("Win")}
+        // else if (
+        //     cells[0].textContent === "o" &&
+        //     cells[3].textContent === "o" &&
+        //     cells[6].textContent === "o"
+        //   ) { alert("Win")}
+        // else if (
+        //     cells[1].textContent === "o" &&
+        //     cells[4].textContent === "o" &&
+        //     cells[7].textContent === "o"
+        //   ) { alert("Win")}
+        // else if (
+        //     cells[2].textContent === "o" &&
+        //     cells[5].textContent === "o" &&
+        //     cells[8].textContent === "o"
+        //   ) { alert("Win")}
+        // else if (
+        //     cells[0].textContent === "o" &&
+        //     cells[4].textContent === "o" &&
+        //     cells[8].textContent === "o"
+        //   ) { alert("Win")}
+        // else if (
+        //     cells[2].textContent === "o" &&
+        //     cells[4].textContent === "o" &&
+        //     cells[6].textContent === "o"
+        //   ) { alert("Win")}
+        
+
+        // if(cells[0].textContent === "x" &&
+        //   cells[1].textContent === "x" &&
+        //   cells[2].textContent === "x"
+        //   ) { alert("Win")}
+        //   else if (
+        //     cells[3].textContent === "x" &&
+        //     cells[4].textContent === "x" &&
+        //     cells[5].textContent === "x"
+        //   ) { alert("Win")}
+        //    else if (
+        //     cells[6].textContent === "x" &&
+        //     cells[7].textContent === "x" &&
+        //     cells[8].textContent === "x"
+        //   ) { alert("Win")}
+        //   else if (
+        //       cells[0].textContent === "x" &&
+        //       cells[3].textContent === "x" &&
+        //       cells[6].textContent === "x"
+        //     ) { alert("Win")}
+        //   else if (
+        //       cells[1].textContent === "x" &&
+        //       cells[4].textContent === "x" &&
+        //       cells[7].textContent === "x"
+        //     ) { alert("Win")}
+        //   else if (
+        //       cells[2].textContent === "x" &&
+        //       cells[5].textContent === "x" &&
+        //       cells[8].textContent === "x"
+        //     ) { alert("Win")}
+        //   else if (
+        //       cells[0].textContent === "x" &&
+        //       cells[4].textContent === "x" &&
+        //       cells[8].textContent === "x"
+        //     ) { alert("Win")}
+        //   else if (
+        //       cells[2].textContent === "x" &&
+        //       cells[4].textContent === "x" &&
+        //       cells[6].textContent === "x"
+        //     ) { alert("Win")}
       
-      }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  // LOOP THROUGH EACH WINNING CONDITION ARRAY
-  // -> LOOP THROUGH EACH INDEX
-  // CHECK IF THE SAME VALUE -> EITHER X OR 0
-
-  // IF LOOP IS NOT WORKING
-//   for (let i = 0; i < winningCombination.length; i++) {
-//     for (let j = 0; j < winningCombination[i].length; j++) {
-//       const winingIndex = winningCombination[i][j];
-//       if (winnerArray == winingIndex ) {
-//         alert("winner")
-//       }
-//     }
-//   }
-// };
+      
 
 
 
@@ -113,16 +153,16 @@ const startGame = () => {
 // WHEN TARGET IS CLICKED IT TAKES THE VALUE FROM THE EVENT IN THIS CASE THE ID'S
 
 boxClicked = (event) => {
-  if (currentPlayer == playerX) {
-    event.target.innertext = currentPlayer;
-    winnerArray.push(event.target.id);
-  }
-  if (currentPlayer == playerO) {
-    currentPlayer = playerX;
-  } else {
-    currentPlayer = playerO;
-  }
+  
+if (event.target.innerHTML === "") {
+    if (currentPlayer === playerX) {
+        currentPlayer = playerO
+      }
+      else if (currentPlayer === playerO) {
+        currentPlayer = playerX
+      }
   event.target.innerHTML = currentPlayer;
+}
 
   winningCycle();
 //   playerHasWon();
