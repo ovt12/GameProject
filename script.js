@@ -21,11 +21,8 @@ let winnerArray = [];
 const chooseIcon = (event) => {
   if (event.target.innerHTML == "o") {
     currentPlayer = playerX;
-    console.log(currentPlayer);
-    console.log("o");
   } else if (event.target.innerHTML == "x") {
     currentPlayer = playerO;
-    console.log(currentPlayer);
   }
 };
 
@@ -35,17 +32,6 @@ const userSelection = () => {
 };
 
 let currentPlayer = userSelection();
-
-// const winningCombination = [
-//   ["0", "1", "2"],
-//   ["3", "4", "5"],
-//   ["6", "7", "8"],
-//   ["0", "3", "6"],
-//   ["1", "4", "7"],
-//   ["2", "5", "8"],
-//   ["0", "4", "8"],
-//   ["2", "4", "6"],
-// ];
 
 
 // FUNCTION TO CHECK EACH ARRAY AND RETURN A TRUE OR FALSE VALUE => DEPENDING IF ALL OF THEM ARE THE SAME VALUE AS THE CURRENT PLAYER
@@ -74,9 +60,9 @@ const winningCycle = () => {
  checkArray(0, 4, 8) ||
  checkArray(2, 4, 6)
   ) {
-    alert(`WELL DONE!!${currentPlayer}`);
+    heading.innerHTML = `PLAYER ${currentPlayer.toUpperCase()} WINS THE GAME`;
   } else if (counter >= 9) {
-    alert(`ITS A DRAW!!!!!!!!!`)
+    heading.innerHTML = `DRAW!`;
   }
 
 };
@@ -96,7 +82,7 @@ const startGame = () => {
 boxClicked = (event) => {
 
   if (!currentPlayer) {
-    alert(`SELECT AN ICON TO BEGIN THE GAME!!`);
+    heading.innerHTML = "SELECT ICON TO BEGIN GAME";
   } else {
     if (event.target.innerHTML === "") {
       if (currentPlayer === playerX) {
@@ -104,6 +90,7 @@ boxClicked = (event) => {
       } else if (currentPlayer === playerO) {
         currentPlayer = playerX;
       }
+      heading.innerHTML = "BEGIN";
       event.target.innerHTML = currentPlayer;
       counter++
     }
@@ -118,7 +105,7 @@ const restart = () => {
   cells.forEach((cell) => {
     cell.innerHTML = "";
   });
-  heading.innerHTML = "Tic Tac Toe";
+  heading.innerHTML = "Noughts & Crosses";
   winnerArray = [];
   counter = 0;
 };

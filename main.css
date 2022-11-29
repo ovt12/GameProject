@@ -39,7 +39,7 @@ button {
   font-weight: 900;
 }
 
-.restartButton:hover {
+.restartButton {
   width: 100px;
   height: 50px;
   color: #001e1d;
