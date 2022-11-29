@@ -1,5 +1,7 @@
 body {
   text-align: center;
+  font-size: 70px;
+  color: #f9bc60;
 }
 
 .box-container {
@@ -8,14 +10,40 @@ body {
   width: 300px;
   height: 300px;
   margin: 10px auto;
-  background-color: lightcoral;
+  background-color: lightcorl;
 }
 
 .cell {
   width: 100px;
   height: 100px;
-  border: 2px solid rgb(119, 95, 142);
+  border: 3px solid #e16162;
   cursor: pointer;
+}
+
+h1 {
+  font-size: 4rem;
+  color: #fffffe;
+  padding: 2rem;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #e16162;
+}
+
+button {
+  width: 50px;
+  height: 50px;
+  color: #001e1d;
+  background-color: #f9bc60;
+  font-weight: 900;
+}
+
+.restartButton:hover {
+  width: 100px;
+  height: 50px;
+  color: #001e1d;
+  background-color: #f9bc60;
 }
 
 * {
@@ -27,5 +55,5 @@ body {
 body {
   margin: 0;
   padding: 0;
-  background: linear-gradient(to right, rgb(239, 185, 217), rgb(243, 213, 172));
+  background: #004643;
 }/*# sourceMappingURL=main.css.map */
