@@ -1,9 +1,12 @@
 @use "./variables" as *;
 
+@media screen and (min-width: $mobile-breakpoint){
+
 body {
     text-align: center;
     font-size: 70px;
     color: $color-button;
+    background: $color-background;
 }
 
 
@@ -14,6 +17,8 @@ body {
   height: 300px;
   margin: 10px auto;
   background-color: lightcorl;
+  padding-top: 50px;
+  padding-bottom: 350px;
 }
 
 .cell {
@@ -42,6 +47,8 @@ button {
   color: $color-buttonText;
   background-color: $color-button;
   font-weight: 900;
+  border-radius: 30%;
+  
 
 }
 
@@ -50,8 +57,47 @@ button {
   height: 50px;
   color: $color-buttonText;
   background-color: $color-button;
+  border-radius: 0%;
 }
 
+}
+
+
+@media screen and (min-width:$desktop-breakpoint) {
+
+  body {
+    text-align: center;
+    color: $color-second-button;
+    background-color: $color-second-background;
+}
+
+.cell {
+  
+  border: 3px solid $color-second-heading;
+
+}
+
+h1 {
+  font-size: 4rem;
+  color: $color-second-heading;
+  
+}
+
+h2 {
+  font-size: 2rem;
+  color: $color-second-boarder;
+}
+
+button, .restartButton {
+  color: $color-second-buttonText;
+  background-color: $color-second-button;
+  
+  
+
+}
+
+
+}
 
 
 

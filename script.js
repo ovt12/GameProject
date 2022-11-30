@@ -90,7 +90,7 @@ boxClicked = (event) => {
       } else if (currentPlayer === playerO) {
         currentPlayer = playerX;
       }
-      heading.innerHTML = "BEGIN";
+      heading.innerHTML = "BEGIN!";
       event.target.innerHTML = currentPlayer;
       counter++
     }

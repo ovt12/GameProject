@@ -1,51 +1,73 @@
-body {
-  text-align: center;
-  font-size: 70px;
-  color: #f9bc60;
+@media screen and (min-width: 320px) {
+  body {
+    text-align: center;
+    font-size: 70px;
+    color: #f9bc60;
+    background: #004643;
+  }
+  .box-container {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    width: 300px;
+    height: 300px;
+    margin: 10px auto;
+    background-color: lightcorl;
+    padding-top: 50px;
+    padding-bottom: 350px;
+  }
+  .cell {
+    width: 100px;
+    height: 100px;
+    border: 3px solid #e16162;
+    cursor: pointer;
+  }
+  h1 {
+    font-size: 4rem;
+    color: #fffffe;
+    padding: 2rem;
+  }
+  h2 {
+    font-size: 2rem;
+    color: #e16162;
+  }
+  button {
+    width: 50px;
+    height: 50px;
+    color: #001e1d;
+    background-color: #f9bc60;
+    font-weight: 900;
+    border-radius: 30%;
+  }
+  .restartButton {
+    width: 100px;
+    height: 50px;
+    color: #001e1d;
+    background-color: #f9bc60;
+    border-radius: 0%;
+  }
 }
-
-.box-container {
-  display: grid;
-  grid-template-columns: repeat(3, auto);
-  width: 300px;
-  height: 300px;
-  margin: 10px auto;
-  background-color: lightcorl;
+@media screen and (min-width: 1024px) {
+  body {
+    text-align: center;
+    color: #f582ae;
+    background-color: #fef6e4;
+  }
+  .cell {
+    border: 3px solid #001858;
+  }
+  h1 {
+    font-size: 4rem;
+    color: #001858;
+  }
+  h2 {
+    font-size: 2rem;
+    color: #8bd3dd;
+  }
+  button, .restartButton {
+    color: #001858;
+    background-color: #f582ae;
+  }
 }
-
-.cell {
-  width: 100px;
-  height: 100px;
-  border: 3px solid #e16162;
-  cursor: pointer;
-}
-
-h1 {
-  font-size: 4rem;
-  color: #fffffe;
-  padding: 2rem;
-}
-
-h2 {
-  font-size: 2rem;
-  color: #e16162;
-}
-
-button {
-  width: 50px;
-  height: 50px;
-  color: #001e1d;
-  background-color: #f9bc60;
-  font-weight: 900;
-}
-
-.restartButton {
-  width: 100px;
-  height: 50px;
-  color: #001e1d;
-  background-color: #f9bc60;
-}
-
 * {
   padding: 0;
   margin: 0;
@@ -55,5 +77,4 @@ button {
 body {
   margin: 0;
   padding: 0;
-  background: #004643;
 }/*# sourceMappingURL=main.css.map */
