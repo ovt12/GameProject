@@ -22,7 +22,7 @@
     cursor: pointer;
   }
   h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     color: #fffffe;
     padding: 2rem;
   }
@@ -44,6 +44,9 @@
     color: #001e1d;
     background-color: #f9bc60;
     border-radius: 0%;
+  }
+  .endGameMessages {
+    padding-bottom: 1rem;
   }
 }
 @media screen and (min-width: 1024px) {
