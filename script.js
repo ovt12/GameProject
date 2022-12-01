@@ -14,9 +14,8 @@ const playerO = "o";
 
 let counter = 0
 
-let winnerArray = [];
 
-// ADDED FEATURE TO CHOOSE WHAT ICON YOU WANT TO PLAY AS
+// ADDED FEATURE TO CHOOSE WHAT ICON YOU WANT TO PLAY AS / TARGETS THE CLICK EVENTS OF THE ICON BUTTONS
 
 const chooseIcon = (event) => {
   if (event.target.innerHTML == "o") {
@@ -34,9 +33,7 @@ const userSelection = () => {
 let currentPlayer = userSelection();
 
 
-// FUNCTION TO CHECK EACH ARRAY AND RETURN A TRUE OR FALSE VALUE => DEPENDING IF ALL OF THEM ARE THE SAME VALUE AS THE CURRENT PLAYER
-
-
+// FUNCTION TO CHECK EACH ARRAY AND RETURN A TRUE OR FALSE VALUE => DEPENDING IF ALL THE ARRAY ELEMENTS ARE THE SAME VALUE AS THE CURRENT PLAYER
 // TAKES WINNING NUMBERS 
 const checkArray = (num1, num2, num3) => {
   const winningArr = [
@@ -106,7 +103,6 @@ const restart = () => {
     cell.innerHTML = "";
   });
   heading.innerHTML = "Noughts & Crosses";
-  winnerArray = [];
   counter = 0;
 };
 restartButton.addEventListener("click", restart);
