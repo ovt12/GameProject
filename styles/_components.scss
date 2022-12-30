@@ -1,6 +1,5 @@
 @use "./variables" as *;
 
-@media screen and (min-width: $mobile-breakpoint){
 
 body {
     text-align: center;
@@ -64,7 +63,6 @@ button {
   padding-bottom: 1rem;
 }
 
-}
 
 
 @media screen and (min-width:$desktop-breakpoint) {

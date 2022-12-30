@@ -35,11 +35,11 @@ let currentPlayer = userSelection();
 
 // FUNCTION TO CHECK EACH ARRAY AND RETURN A TRUE OR FALSE VALUE => DEPENDING IF ALL THE ARRAY ELEMENTS ARE THE SAME VALUE AS THE CURRENT PLAYER
 // TAKES WINNING NUMBERS 
-const checkArray = (num1, num2, num3) => {
+const checkForWinningRow = (cellIndex1, cellIndex2, cellIndex3) => {
   const winningArr = [
-    cells[num1].innerHTML,
-    cells[num2].innerHTML,
-    cells[num3].innerHTML,
+    cells[cellIndex1].innerHTML,
+    cells[cellIndex2].innerHTML,
+    cells[cellIndex3].innerHTML,
   ];
 
   const result = winningArr.every((item) => item === currentPlayer);
@@ -48,14 +48,14 @@ const checkArray = (num1, num2, num3) => {
 
 const winningCycle = () => {
   if (
- checkArray(0, 1, 2) ||
- checkArray(3, 4, 5) ||
- checkArray(6, 7, 8) ||
- checkArray(0, 3, 6) ||
- checkArray(1, 4, 7) ||
- checkArray(2, 5, 8) ||
- checkArray(0, 4, 8) ||
- checkArray(2, 4, 6)
+ checkForWinningRow(0, 1, 2) ||
+ checkForWinningRow(3, 4, 5) ||
+ checkForWinningRow(6, 7, 8) ||
+ checkForWinningRow(0, 3, 6) ||
+ checkForWinningRow(1, 4, 7) ||
+ checkForWinningRow(2, 5, 8) ||
+ checkForWinningRow(0, 4, 8) ||
+ checkForWinningRow(2, 4, 6)
   ) {
     heading.innerHTML = `PLAYER ${currentPlayer.toUpperCase()} WINS THE GAME`;
   } else if (counter >= 9) {
