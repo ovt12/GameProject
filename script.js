@@ -57,9 +57,13 @@ const winningCycle = () => {
  checkForWinningRow(0, 4, 8) ||
  checkForWinningRow(2, 4, 6)
   ) {
-    heading.innerHTML = `PLAYER ${currentPlayer.toUpperCase()} WINS THE GAME`;
+    heading.innerHTML = `PLAYER ${currentPlayer.toUpperCase()} WINS THE GAME.`;
+    cells.forEach((cell) => {
+      cell.innerHTML = currentPlayer;
+    });
   } else if (counter >= 9) {
     heading.innerHTML = `DRAW!`;
+    currentPlayer = ""
   }
 
 };
@@ -103,6 +107,7 @@ const restart = () => {
     cell.innerHTML = "";
   });
   heading.innerHTML = "Noughts & Crosses";
+  currentPlayer = ""
   counter = 0;
 };
 restartButton.addEventListener("click", restart);
